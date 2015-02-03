@@ -1,0 +1,199 @@
+.visualPanel {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 50%;
+}
+
+.textPanel {
+	position: absolute;
+	left: 500px;
+	top: 10px;
+	width: 50%;
+}
+
+.searchBox {
+	position: absolute;
+	left: 300px;
+	top: 125px;
+	width: 50%;
+	overflow: hidden;
+}
+
+.sensePosition {
+	position: relative;
+	padding: 3px;
+	margin: 3px;
+	font-size: 16px;
+}
+
+.textBrowser {
+	position: absolute;
+	left: 740px;
+	top: 175px;
+	height: 70%;
+	width: 45%;
+	overflow-y: auto;
+}
+
+/* For the visual view */
+.node circle {
+	fill: rgb(255, 255, 255);
+	fill-opacity: 1;
+	stroke: #FFCCCC;
+	stroke-width: 2px;
+}
+
+.leaf circle:hover {
+	stroke-width: 3px;
+}
+
+.node circle:hover {
+	stroke-width: 3px;
+}
+
+.leaf circle {
+	fill: #ff7f0e;
+	fill-opacity: 1;
+}
+
+.legendText {
+	position: absolute;
+	top: 15px;
+}
+
+.legend {
+	position: absolute;
+	left: 10px;
+}
+
+.lemma {
+	position: absolute;
+	top: 150px;
+	left: 50px;
+}
+
+.legendPack {
+	stroke-width: 1px;
+	fill-opacity: 0.9;
+}
+
+.circlePack {
+	position: absolute;
+	left: 10px;
+	top: 175px;
+	border: solid 4px #05B2B2;
+	border-radius: 15px;
+	font-size: 16px;
+}
+
+/* For tabbed Panel */
+div.tabpanel div.tab-row li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
+
+div.tabpanel div.tab-row a:link,div.tabpanel div.tab-row a:visited {
+	float: left;
+	background: #f3f3f3;
+	font-size: 16px;
+	line-height: 14px;
+	font-weight: bold;
+	padding: 2px 10px 2px 10px;
+	margin-right: 4px;
+	border: 1px solid #ccc;
+	text-decoration: none;
+	color: #666;
+}
+
+div.tabpanel div.tab-row li.selected a:link,div.tabpanel div.tab-row a:visited.active
+	{
+	border-bottom: 1px solid #fff;
+	background: #fff;
+	color: #000;
+}
+
+div.tabpanel div.tab-row a:hover {
+	background: #fff;
+}
+
+/* For the Analyze tab */
+
+/* Bar graphs */
+.sensesGraph {
+	position: absolute;
+	left: 50px;
+	top: 100px;
+}
+
+/*.bar {
+  fill: steelblue;
+}*/
+.bar:hover {
+	fill: brown;
+}
+
+.axis {
+	font: 14px sans-serif;
+}
+
+.axis path,.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.x.axis path {
+	display: none;
+}
+
+.y.axis {
+	font-size: 14px;
+}
+
+/* For pie chart */
+.sensesPie {
+	position: absolute;
+	left: 50px;
+	top: 530px;
+}
+
+.arc path {
+	stroke: #fff;
+}
+
+/* Custom menu for compare */
+.custom_menu {
+	position: absolute;
+	background-color: #C2E0FF;
+	/*border: 1px solid #05B2B2;*/
+	border-radius: 8px;
+	padding: 2px;
+	display: none;
+}
+
+/* tooltip */
+.tooltip {
+	position: absolute;
+	padding: 10px;
+	font: 14px sans-serif;
+	background: #C2E0FF;
+	border: 0px;
+	border-radius: 8px;
+	pointer-events: none;
+}
+
+/* text for analyze tab */
+.graphText {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+.pieText {
+	position: absolute;
+	top: 530px;
+	left: 50px;
+}

@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<body>
+	<wicket:extend>
+		<div class="searchBox">
+			<form wicket:id="search">
+				<input wicket:id="textbox" type=text value="" size=40 /> <select
+					wicket:id="order"></select> <input class="btn-small" type=submit
+					value="Search">
+			</form>
+		</div>
+		<div wicket:id="visualPanel" class="visualPanel"></div>
+		<div wicket:id="textPanel" class="testPanel"></div>
+	</wicket:extend>
+</body>
+</html>

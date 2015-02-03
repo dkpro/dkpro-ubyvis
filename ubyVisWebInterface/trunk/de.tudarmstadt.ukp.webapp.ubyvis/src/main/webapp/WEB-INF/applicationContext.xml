@@ -1,0 +1,52 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+	<!-- Exception translation bean post processor -->
+	<!--  <bean
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />-->
+
+	<!-- Wicket application -->
+	<bean id="wicketApplication"
+		class="de.tudarmstadt.ukp.dkpro.uby.vis.webapp.WicketApplication" />
+
+    <bean id="applicationContextProvider"
+		class="de.tudarmstadt.ukp.dkpro.uby.vis.webapp.support.spring.ApplicationContextProvider" />
+ 
+    <bean id="ubyQuickAPI" class="de.tudarmstadt.ukp.lmf.api.UbyQuickAPI">
+		<constructor-arg index="0" type="de.tudarmstadt.ukp.lmf.transform.DBConfig" ref="dbconfig"/>
+	</bean>
+	
+	<bean id="dbconfig" class="de.tudarmstadt.ukp.lmf.transform.DBConfig">
+		 
+		<!--  <property name="jdbc_url" value="jdbc:h2:file:I:/embeddedUby/h2ubylite"/>
+		
+		<property name="db_vendor" value="h2"/>
+		<property name="jdbc_driver_class" value="org.h2.Driver"/>
+		
+		<property name="user" value="root"/>  
+		<property name="password" value="pass"/> -->
+		
+		<property name="jdbc_url" value="localhost/uby_open_0_6_0"/>
+		
+		<property name="db_vendor" value="mysql"/>
+		<property name="jdbc_driver_class" value="com.mysql.jdbc.Driver"/>
+		
+		<property name="user" value="root"/>  
+		<property name="password" value="kirana"/>
+		
+		<property name="showSQL" value="false"/> 
+        
+	</bean>
+
+	<!-- Application services -->
+	
+	<!-- JSON -->
+   	<bean id="jsonConverter"
+		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+
+</beans>
