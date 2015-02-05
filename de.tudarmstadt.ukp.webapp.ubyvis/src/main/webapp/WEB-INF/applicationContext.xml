@@ -31,13 +31,13 @@
 		<property name="user" value="root"/>  
 		<property name="password" value="pass"/> -->
 		
-		<property name="jdbc_url" value="localhost/uby_open_0_6_0"/>
+		<property name="jdbc_url" value="uby.ukp.informatik.tu-darmstadt.de/uby_open_0_3_0"/>
 		
 		<property name="db_vendor" value="mysql"/>
 		<property name="jdbc_driver_class" value="com.mysql.jdbc.Driver"/>
 		
-		<property name="user" value="root"/>  
-		<property name="password" value="kirana"/>
+		<property name="user" value="eckle"/>  
+		<property name="password" value="JupiterPluto"/>
 		
 		<property name="showSQL" value="false"/> 
         
