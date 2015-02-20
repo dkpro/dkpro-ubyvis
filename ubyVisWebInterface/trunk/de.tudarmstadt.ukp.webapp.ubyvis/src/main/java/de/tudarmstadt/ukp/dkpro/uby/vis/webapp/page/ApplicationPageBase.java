@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2012
+ * Copyright 2015
  * Ubiquitous Knowledge Processing (UKP) Lab and FG Language Technology
  * Technische Universität Darmstadt
  *
@@ -7,7 +7,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *  http://www.apache.org/licenses/LICENSE-2.0
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -28,7 +28,6 @@ import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 
@@ -59,20 +58,20 @@ public abstract class ApplicationPageBase
         commonInit();
     }
 
-    
-    @Override     
+
+    @Override
     public void renderHead(IHeaderResponse response) {
     	//Session.get().setStyle("amelia");
     	super.renderHead(response);
     	response.render(JavaScriptHeaderItem.forReference(Bootstrap.getSettings().getJsResourceReference()));
     	response.render(CssHeaderItem.forReference(Bootstrap.getSettings().getCssResourceReference()));
-    	
+
     	/*response.render(JavaScriptHeaderItem.forReference(Bootstrap.getSettings().getJsResourceReference()));
     	response.render(CssHeaderItem.forReference(Bootstrap.getSettings().getCssResourceReference()));*/
-    	
-    	
-    } 
-    
+
+
+    }
+
     @SuppressWarnings({ "serial" })
     private void commonInit()
     {
