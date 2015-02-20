@@ -1,16 +1,29 @@
+/*******************************************************************************
+ * Copyright 2015
+ * Ubiquitous Knowledge Processing (UKP) Lab
+ * Technische Universität Darmstadt
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ ******************************************************************************/
 package de.tudarmstadt.ukp.dkpro.uby.vis.webapp.tryUby;
 
 import java.io.IOException;
 import java.io.StringWriter;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import java.util.Map.Entry;
-import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.wicket.Component;
@@ -106,7 +119,8 @@ public class SenseAlign extends Panel {
 
 		final AbstractDefaultAjaxBehavior behave = new AbstractDefaultAjaxBehavior() {
 
-			public void renderHead(Component component,
+			@Override
+            public void renderHead(Component component,
 					IHeaderResponse aResponse) {
 
 				super.renderHead(component, aResponse);
@@ -165,7 +179,7 @@ public class SenseAlign extends Panel {
 
 	/**
 	 * Generates sense clusters and retrieves sense details.
-	 * 
+	 *
 	 */
 	public void loadSenseData() {
 		senseItemModel = new LoadableDetachableModel() {
